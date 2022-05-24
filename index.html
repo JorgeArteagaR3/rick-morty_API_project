@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Rick and Morty Characters</title>
+    </head>
+    <body>
+        <main>
+            <h1>Rick and Morty Characters</h1>
+            <div class="container">
+                <div class="card">
+                    <p class="name"></p>
+
+                    <div class="picture">
+                        <div id="loadingstatus" class="loader">
+                            <div class="lds-roller">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <img class="characterpicture" alt="" />
+                    </div>
+                    <div class="details">
+                        <div>
+                            <p class="detail">Status</p>
+                            <p class="status"></p>
+                        </div>
+                        <div>
+                            <p class="detail">Specie</p>
+                            <p class="specie"></p>
+                        </div>
+                    </div>
+                </div>
+                <button type="button">Change characther</button>
+            </div>
+        </main>
+        <script src="./main.js"></script>
+    </body>
+</html>
