@@ -1,20 +1,23 @@
 let data;
 let loading;
 const loader = document.getElementById("loadingstatus");
+const img = document.querySelector("img");
 
 const init = async () => {
     let y = Math.floor(Math.random() * 826 + 1);
     let URL = `https://rickandmortyapi.com/api/character/${y}`;
-    loading = true;
+    img.style.display = "none";
+    loader.style.display = "block";
     const res = await fetch(URL);
-    loading = false;
+    img.style.display = "block";
+    loader.style.display = "none";
+
     data = await res.json();
     rmCharacter();
 };
 init();
 
 const rmCharacter = () => {
-    const img = document.querySelector("img");
     const namep = document.querySelector(".name");
     const status = document.querySelector(".status");
     const specie = document.querySelector(".specie");
@@ -31,9 +34,7 @@ const rmCharacter = () => {
     }
 
     if (loading === false) {
-        loader.style.display = "none";
     } else {
-        loader.style.display = "block";
     }
 };
 
